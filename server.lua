@@ -125,5 +125,3 @@ AddEventHandler('esx:onRemoveInventoryItem', function(source, item, count)
 
 end)
 
-  end
-end)
