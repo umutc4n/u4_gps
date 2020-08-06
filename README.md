@@ -1,6 +1,6 @@
 # U4 Roleplay : u4_gps
 
-[EN]
+**[EN]**
 Gps is now an item.
 
 Now you can select channel like radio. 
@@ -19,7 +19,7 @@ Sheriff - Green
 Police - Blue
 
 
-[TR]
+**[TR]**
 Oyun içerisinde GPS sistemini item haline getirir.Aynı telsiz gibi bir şifre belirlersiniz. Şifresi aynı olan oyuncular birbirlerini aynı haritada " belirledikleri isimleriyle" görmeye başlarlar.
 
 1-10 numaralı kanallar devlete aittir. İlerleyen aşamada hacker bu kanalları hackleyebilecektir.
