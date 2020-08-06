@@ -104,3 +104,26 @@ local _source = source
 	end
 		
 end)
+
+
+AddEventHandler('esx:onRemoveInventoryItem', function(source, item, count)
+  local _source = source
+ 
+  if item.name == 'gps' and item.count < 1 then
+    -- Did the player ever join?
+    if _source ~= nil then
+        local xPlayer = ESX.GetPlayerFromId(_source)
+
+        if  veriler ~= nil then
+            for k,v in pairs(veriler) do 
+                 if v.oyuncuID == xPlayer.source then
+                    table.remove(veriler,k)
+                 end
+            end
+        end 
+    end
+
+end)
+
+  end
+end)
