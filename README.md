@@ -4,6 +4,7 @@
 
 
 **[EN]**
+You can check twitch.tv/umutc4n to follow  development.
 
 Gps is now an item.
 
@@ -25,6 +26,7 @@ Job Colors
 **Dependency:** [mythic_notify](https://github.com/JayMontana36/mythic_notify)
 
 **[TR]**
+Yazılım geliştirmelerimi takip etmek için twitch.tv/umutc4n adresine bakabilirsiniz
 
 Oyun içerisinde GPS sistemini item haline getirir.Aynı telsiz gibi bir şifre belirlersiniz. Şifresi aynı olan oyuncular birbirlerini aynı haritada " belirledikleri isimleriyle" görmeye başlarlar.
 
