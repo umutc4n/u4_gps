@@ -22,6 +22,7 @@ Job Colors
 * Sheriff - Green
 * Police - Blue
 
+**Dependency:** [mythic_notify](https://github.com/JayMontana36/mythic_notify)
 
 **[TR]**
 
@@ -34,6 +35,7 @@ Oyun içerisinde GPS sistemini item haline getirir.Aynı telsiz gibi bir şifre 
 * Sheriff - Yeşil
 * Police - Mavi
 
+**Gerekli:** [mythic_notify](https://github.com/JayMontana36/mythic_notify)
 
 ![SS](https://i.hizliresim.com/RX9VZ1.png)
 
