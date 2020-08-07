@@ -37,6 +37,9 @@ Oyun içerisinde GPS sistemini item haline getirir.Aynı telsiz gibi bir şifre 
 
 **Gerekli:** [mythic_notify](https://github.com/JayMontana36/mythic_notify)
 
+![GPS1](https://i.hizliresim.com/JEBWWZ.png)
+![GPS2](https://i.hizliresim.com/jotGJY.png)
+![GPS3](https://i.hizliresim.com/GVf8ct.png)
 ![SS](https://i.hizliresim.com/RX9VZ1.png)
 
 
