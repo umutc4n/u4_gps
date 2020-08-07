@@ -86,7 +86,7 @@ end)
 
 RegisterNetEvent('u4gps:bakbakam')
 AddEventHandler('u4gps:bakbakam', function()
-	if radar == true
+	if radar then
 				if selam ~= nil then
 					for k,v in pairs(selam) do 
 						if DoesBlipExist(v) then
