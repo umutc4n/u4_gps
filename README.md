@@ -1,6 +1,10 @@
+
 # U4 Roleplay : u4_gps
+![SS](https://i.hizliresim.com/pY8Z8L.jpg)
+
 
 **[EN]**
+
 Gps is now an item.
 
 Now you can select channel like radio. 
@@ -14,20 +18,23 @@ You can determine your name on the GPS
 
 Job Colors
 
-EMS - Red
-Sheriff - Green
-Police - Blue
+* EMS - Red
+* Sheriff - Green
+* Police - Blue
 
 
 **[TR]**
+
 Oyun içerisinde GPS sistemini item haline getirir.Aynı telsiz gibi bir şifre belirlersiniz. Şifresi aynı olan oyuncular birbirlerini aynı haritada " belirledikleri isimleriyle" görmeye başlarlar.
 
 1-10 numaralı kanallar devlete aittir. İlerleyen aşamada hacker bu kanalları hackleyebilecektir.
 
 
-EMS - Kirmizi
-Sheriff - Yeşil
-Police - Mavi
+* EMS - Kirmizi
+* Sheriff - Yeşil
+* Police - Mavi
 
 
 ![SS](https://i.hizliresim.com/RX9VZ1.png)
+
+
