@@ -86,32 +86,33 @@ end)
 
 RegisterNetEvent('u4gps:bakbakam')
 AddEventHandler('u4gps:bakbakam', function()
-			if selam ~= nil then
-				for k,v in pairs(selam) do 
-					if DoesBlipExist(v) then
-						 RemoveBlip(v)
-						 table.remove(selam)
+	if radar == true
+				if selam ~= nil then
+					for k,v in pairs(selam) do 
+						if DoesBlipExist(v) then
+							 RemoveBlip(v)
+							 table.remove(selam)
+						end
 					end
-				end
-			end		
-	ESX.TriggerServerCallback("u4:gpsverial", function(veriler)
-		if veriler then		
-			if veriler ~= nil and GpsVeri ~= nil then
-				for k,v in pairs(veriler) do 
-					if v.sifre ~= nil and GpsVeri ~= nil then
-						 if v.sifre == GpsVeri[1]["sifre"] then
-							if  v.oyuncuID ~= GpsVeri[1]["oyuncuID"] then
-								createBlip(v.sikiksokuk,v.isim,v.job)
-							end
-						 end	
+				end		
+		ESX.TriggerServerCallback("u4:gpsverial", function(veriler)
+			if veriler then		
+				if veriler ~= nil and GpsVeri ~= nil then
+					for k,v in pairs(veriler) do 
+						if v.sifre ~= nil and GpsVeri ~= nil then
+							 if v.sifre == GpsVeri[1]["sifre"] then
+								if  v.oyuncuID ~= GpsVeri[1]["oyuncuID"] then
+									createBlip(v.sikiksokuk,v.isim,v.job)
+								end
+							 end	
+						end 
 					end 
-				end 
-				
-			end
-		else 
-		 radar = false 
-		end 
-	end)
+				end
+			else 
+			 radar = false 
+			end 
+		end)
+	end
 end)
 
 
