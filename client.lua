@@ -2,6 +2,7 @@ ESX                             = nil
 local radar = false
 local GpsVeri = {}
 local selam = {}
+local kullanim = false
 
 Citizen.CreateThread(function()
 	while ESX == nil do
@@ -13,8 +14,10 @@ end)
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(5000)
-		TriggerEvent('u4gps:bakbakam')
+		Citizen.Wait(9000)
+		if kullanim then
+			TriggerEvent('u4gps:bakbakam')
+		end
 	end
 end)
 
@@ -25,7 +28,7 @@ end)
 
 RegisterNetEvent('u4gps:gpskullanAQ')
 AddEventHandler('u4gps:gpskullanAQ', function()
-
+			
 			ESX.UI.Menu.Open('dialog', GetCurrentResourceName(), 'gpssifre',
 				{
 					title = "GPS Şifrenizi Belirleyin (Sayı Olabilir)"
@@ -40,13 +43,11 @@ AddEventHandler('u4gps:gpskullanAQ', function()
 							},
 						function(data2, menu2)
 							if data2.value ~= nil then
-									
-											
 											isim =  data2.value
 											sifre = gpssifre
 											oyuncuID =  GetPlayerServerId(PlayerId())
 											sikiksokuk = PlayerId()
-											
+											kullanim = true
 											for k,v in pairs(GpsVeri) do 
 												 if v.oyuncuID == oyuncuID then
 													table.remove(GpsVeri,k)
@@ -62,7 +63,6 @@ AddEventHandler('u4gps:gpskullanAQ', function()
 														})
 									
 											TriggerServerEvent('u4gps:kayitlarial', isim,sifre,oyuncuID,sikiksokuk)
-											radar = true
 											menu.close()
 											menu2.close()
 							else 
@@ -86,20 +86,19 @@ end)
 
 RegisterNetEvent('u4gps:bakbakam')
 AddEventHandler('u4gps:bakbakam', function()
-	if radar then
-				if selam ~= nil then
-					for k,v in pairs(selam) do 
-						if DoesBlipExist(v) then
-							 RemoveBlip(v)
-							 table.remove(selam)
-						end
-					end
-				end		
+		if selam ~= nil then
+			for k,v in pairs(selam) do 
+				if DoesBlipExist(v) then
+					 RemoveBlip(v)
+					 table.remove(selam)
+				end
+			end
+		end		
 		ESX.TriggerServerCallback("u4:gpsverial", function(veriler)
 			if veriler then		
 				if veriler ~= nil and GpsVeri ~= nil then
 					for k,v in pairs(veriler) do 
-						if v.sifre ~= nil and GpsVeri ~= nil then
+						if v.sifre ~= nil and GpsVeri ~= nil and GpsVeri[1]["sifre"] ~= nil then
 							 if v.sifre == GpsVeri[1]["sifre"] then
 								if  v.oyuncuID ~= GpsVeri[1]["oyuncuID"] then
 									createBlip(v.sikiksokuk,v.isim,v.job)
@@ -112,7 +111,6 @@ AddEventHandler('u4gps:bakbakam', function()
 			 radar = false 
 			end 
 		end)
-	end
 end)
 
 
@@ -131,11 +129,13 @@ function createBlip(id,isim,job)
 		SetBlipScale(blip, 1.0) -- set scale
 		
 		if job == 'police' then
-			SetBlipColour(blip,3)
+			SetBlipColour(blip,29)
 		elseif job == 'ambulance' then
 		    SetBlipColour(blip,1)
 		elseif job == 'sheriff' then
 			SetBlipColour(blip,2)
+		elseif job == 'bakanlik' then
+			SetBlipColour(blip,75)
 		else 
 			SetBlipColour(blip,0)
 		end

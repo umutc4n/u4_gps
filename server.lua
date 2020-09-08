@@ -1,8 +1,10 @@
 local ESX = nil
 local veriler = {}
+
 TriggerEvent('esx:getSharedObject', function(obj) 
 	ESX = obj 
 end)
+
 
 
 
@@ -17,7 +19,7 @@ AddEventHandler('u4gps:kayitlarial', function(isim,sifre,oyuncuID,sikiksokuk)
 	local sex = nil
 	if _source ~= nil then
 		local xPlayer = ESX.GetPlayerFromId(_source)
-		if xPlayer.job.name == 'admin' or xPlayer.job.name == 'police' or xPlayer.job.name == 'ambulance' or xPlayer.job.name == 'sheriff' then
+		if xPlayer.job.name == 'admin' or xPlayer.job.name == 'police' or xPlayer.job.name == 'ambulance' or xPlayer.job.name == 'sheriff' or xPlayer.job.name == 'bakanlik' then
 			sex = xPlayer.job.name
 		else 
 			sex = false 
